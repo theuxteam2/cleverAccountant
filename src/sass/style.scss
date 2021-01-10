@@ -8,5 +8,77 @@ $theme-colors: (
   src: url("../fonts/helveticaneue/HelveticaNeue Light.ttf");
 }
 
+<<<<<<< HEAD
+=======
+footer {
+  font-family: "Helvetica Neue";
+  background-color: #214475;
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer a, footer a:visited, footer a:hover, footer a:active {
+  color: white;
+  text-decoration: none;
+}
+
+footer h1 {
+  font-size: 24px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  line-height: 0;
+}
+
+.footer-logo img {
+  height: 34px;
+}
+
+footer .smalltext {
+  font-size: 14px;
+}
+
+footer .bigtext {
+  font-size: 20px;
+  padding-bottom: 5px;
+  padding-top: 8px;
+}
+
+footer .centertext {
+  text-align: center;
+}
+
+.footer-footer {
+  padding: 20px;
+}
+
+footer .hours > div > span:nth-child(2) {
+  float: right;
+}
+
+footer img {
+  padding-right: 8px;
+}
+
+@media (max-width: 1000px) {
+
+  footer {
+    text-align: center;
+  }
+
+  #footer-hours {
+    display: none;
+  }
+
+  #footer-services {
+    display: none;
+  }
+}
+
+>>>>>>> 208a09f0e20508a55a6f9b0d5f9d5e782909c3c5
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "./footer";
