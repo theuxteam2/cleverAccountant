@@ -18,10 +18,15 @@ footer a:active {
   text-decoration: none;
 }
 
-.footer-logo {
-  font-size: 20px;
+footer h1 {
+  font-size: 24px;
   padding-top: 25px;
   padding-bottom: 35px;
+  line-height: 0;
+}
+
+.footer-logo img {
+  height: 34px;
 }
 
 footer .smalltext {
@@ -30,6 +35,8 @@ footer .smalltext {
 
 footer .bigtext {
   font-size: 20px;
+  padding-bottom: 5px;
+  padding-top: 8px;
 }
 
 footer .centertext {
@@ -42,4 +49,22 @@ footer .centertext {
 
 footer .hours > div > span:nth-child(2) {
   float: right;
+}
+
+footer img {
+  padding-right: 8px;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    text-align: center;
+  }
+
+  #footer-hours {
+    display: none;
+  }
+
+  #footer-services {
+    display: none;
+  }
 }
