@@ -38,9 +38,10 @@ $HelveticaNeue: "Helvetica Neue";
 
 //IMPORTS
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "./mixins";
+
 @import "./buttons";
+@import "./contactus_footer";
 @import "./footer";
 @import "./home";
 @import "./header";
-@import "./footer";
-@import "./contactus_footer";
