@@ -1,0 +1,46 @@
+#header {
+  background-color: #214475;
+  color: white;
+  font-family: "Helvetica Neue";
+  padding: 13px 0;
+
+  .header-logo {
+    font-size: 28px;
+    padding-bottom: 5px;
+  }
+
+  .header-logo img {
+    height: 34px;
+    padding-right: 12px;
+  }
+
+  #nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  .button {
+    background-color: #DFB13C;
+    width: 119px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+  }
+
+  // Mobile
+  @media (max-width: 1000px) {
+
+  }
+}
