@@ -36,12 +36,17 @@ $theme-font-sizes: (
 $BebasNeue: "Bebas Neue";
 $HelveticaNeue: "Helvetica Neue";
 
+* {
+  font-family: $HelveticaNeue;
+}
 //IMPORTS
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "./mixins";
 
+@import "./aboutus";
 @import "./buttons";
 @import "./contactus_footer";
 @import "./footer";
-@import "./home";
 @import "./header";
+@import "./home";
+@import "./navbar";

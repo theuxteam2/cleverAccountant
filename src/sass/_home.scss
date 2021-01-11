@@ -30,8 +30,9 @@
     }
     @include respond("lg") {
       padding-top: 8rem;
-      height: 60vw;
-      background-size: cover;
+      height: 45vw;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
 
       & > * {
         transform: translate(4rem);
@@ -93,6 +94,7 @@
       font-weight: bold;
       @include respond("lg") {
         max-width: 35%;
+        font-size: 28px;
       }
       &-text {
         font-weight: normal;
@@ -103,6 +105,13 @@
         @include respond("md") {
           max-width: 25%;
         }
+        @include respond("lg") {
+          max-width: 15%;
+          & > div {
+            font-size: 28px;
+            font-weight: bold;
+          }
+        }
       }
     }
   }
@@ -112,6 +121,9 @@
     font-family: $HelveticaNeue;
     &-img {
       height: 5.8rem;
+      @include respond("lg") {
+        height: 10rem;
+      }
       & > img {
         height: 100%;
         width: auto;
@@ -121,11 +133,17 @@
       & > header {
         font-size: map-get($map: $theme-font-sizes, $key: "h1");
         font-weight: bold;
+        @include respond("lg") {
+          font-size: 36px;
+        }
       }
     }
     &-title {
       font-size: map-get($map: $theme-font-sizes, $key: "h3");
       font-weight: bold;
+      @include respond("lg") {
+        font-size: 20px;
+      }
     }
     &-text {
       font-size: map-get($map: $theme-font-sizes, $key: "p2");
@@ -140,6 +158,8 @@
       font-weight: bold;
       @include respond("lg") {
         font-size: 36px;
+        align-self: flex-start;
+        margin-left: 25rem;
       }
     }
   }
@@ -148,6 +168,9 @@
     font-family: $HelveticaNeue;
     @include respond("md") {
       align-self: start;
+    }
+    @include respond("lg") {
+      margin: 1rem !important;
     }
     &-header {
       font-size: map-get($map: $theme-font-sizes, $key: "h1");
@@ -159,6 +182,9 @@
   }
   &-tax {
     font-family: $HelveticaNeue;
+    @include respond("lg") {
+      padding: 0 20rem 0 30rem !important;
+    }
     &-image {
       display: flex;
       justify-content: center;
@@ -189,18 +215,34 @@
     font-family: $HelveticaNeue;
 
     background-color: map-get($map: $theme-colors, $key: "secondary-light");
+    @include respond("lg") {
+      padding: 5rem !important;
+    }
     &-header {
       font-size: map-get($map: $theme-font-sizes, $key: "h1");
       font-weight: bold;
       color: white;
+      @include respond("lg") {
+        font-size: 36px;
+      }
     }
     &-content {
       color: white;
       font-size: map-get($map: $theme-font-sizes, $key: "p1");
+      @include respond("lg") {
+        font-size: 20px;
+        max-width: 80%;
+      }
     }
     &-button {
       @include respond("md") {
         max-width: 30%;
+      }
+      @include respond("lg") {
+        & > div {
+          font-size: 28px;
+          padding: 1rem !important;
+        }
       }
     }
   }
