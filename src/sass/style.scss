@@ -1,12 +1,43 @@
+@use "sass:map";
+
+//FONT-COLORS
 $theme-colors: (
-  "primary": blue,
+  "primary": #103872e0,
+  "secondary": #358891,
+  "secondary-light": #43abc8,
+  "primary-light": #f6f6ff,
+  "white": #ffffff,
   "dark": #000000,
+  "yellow": #dfb13c,
 );
 
+//FONT SIZES
+$theme-font-sizes: (
+  "h1": 26px,
+  "h2": 22px,
+  "h3": 20px,
+  "h4": 16px,
+  "p1": 14px,
+  "p2": 12px,
+);
+
+//FONT FACE
 @font-face {
   font-family: "Helvetica Neue";
   src: url("../fonts/helveticaneue/HelveticaNeue Light.ttf");
 }
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helveticaneue/Helvetica Neu Bold.ttf");
+  font-weight: bold;
+}
 
+//FONTS
+$BebasNeue: "Bebas Neue";
+$HelveticaNeue: "Helvetica Neue";
+
+//IMPORTS
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "./buttons";
 @import "./footer";
+@import "./home";

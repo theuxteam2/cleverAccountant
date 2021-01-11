@@ -1,0 +1,154 @@
+@use "sass:map";
+
+.Home {
+  font-family: $HelveticaNeue;
+  &-hero {
+    background-color: map-get($map: $theme-colors, $key: "primary");
+
+    &-header {
+      padding: 1rem;
+
+      & > header {
+        color: map-get($map: $theme-colors, $key: "white");
+        font-size: map-get($map: $theme-font-sizes, $key: "h1");
+        font-family: $BebasNeue;
+      }
+    }
+    &-image {
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-content {
+      color: map-get($map: $theme-colors, $key: "white");
+      font-family: $HelveticaNeue;
+      font-weight: bold;
+      &-text {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &-why {
+    background-color: map-get($map: $theme-colors, $key: "primary-light");
+    font-family: $HelveticaNeue;
+    &-img {
+      height: 5.8rem;
+      & > img {
+        height: 100%;
+        width: auto;
+      }
+    }
+    &-header {
+      & > header {
+        font-size: map-get($map: $theme-font-sizes, $key: "h1");
+        font-weight: bold;
+      }
+    }
+    &-title {
+      font-size: map-get($map: $theme-font-sizes, $key: "h3");
+      font-weight: bold;
+    }
+    &-text {
+      font-size: map-get($map: $theme-font-sizes, $key: "p2");
+    }
+  }
+
+  &-service {
+    font-family: $HelveticaNeue;
+
+    &-header {
+      font-size: map-get($map: $theme-font-sizes, $key: "h1");
+      font-weight: bold;
+    }
+  }
+
+  &-accounting {
+    font-family: $HelveticaNeue;
+
+    &-header {
+      font-size: map-get($map: $theme-font-sizes, $key: "h1");
+      font-weight: bold;
+    }
+    &-text {
+      font-size: map-get($map: $theme-font-sizes, $key: "p1");
+    }
+  }
+  &-tax {
+    font-family: $HelveticaNeue;
+
+    &-header {
+      font-size: map-get($map: $theme-font-sizes, $key: "h1");
+      font-weight: bold;
+    }
+    &-text {
+      font-size: map-get($map: $theme-font-sizes, $key: "p1");
+    }
+  }
+
+  &-consulting {
+    font-family: $HelveticaNeue;
+    background-color: red;
+
+    &-header {
+      font-size: map-get($map: $theme-font-sizes, $key: "h1");
+      font-weight: bold;
+    }
+    &-text {
+      font-size: map-get($map: $theme-font-sizes, $key: "p1");
+    }
+  }
+
+  &-quote {
+    font-family: $HelveticaNeue;
+
+    background-color: map-get($map: $theme-colors, $key: "secondary-light");
+    &-header {
+      font-size: map-get($map: $theme-font-sizes, $key: "h1");
+      font-weight: bold;
+      color: white;
+    }
+    &-content {
+      color: white;
+      font-size: map-get($map: $theme-font-sizes, $key: "p1");
+    }
+  }
+
+  &-info {
+    font-family: $HelveticaNeue;
+
+    &-logo {
+      background-color: map-get($map: $theme-colors, $key: "primary");
+      padding: 0.5rem;
+      border-radius: 5px;
+      & > img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    &-title {
+      font-family: $HelveticaNeue;
+
+      font-size: map-get($map: $theme-font-sizes, $key: "h2");
+      font-weight: bold;
+    }
+    &-content {
+      & > ul {
+        list-style-type: none;
+        padding: 0;
+      }
+    }
+  }
+  &-testimony {
+    font-family: $HelveticaNeue;
+
+    &-header {
+      font-size: map-get($map: $theme-font-sizes, $key: "h2");
+      font-weight: bold;
+    }
+    &-title {
+      font-size: map-get($map: $theme-font-sizes, $key: "h3");
+    }
+  }
+}
