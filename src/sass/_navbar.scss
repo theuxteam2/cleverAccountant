@@ -106,13 +106,14 @@
     @include respond("lg") {
       text-indent: 0;
     }
-    &.active {
-    }
   }
   &-item {
     & > a {
       font-size: 22px;
       border-bottom: 1px solid white;
+      @include respond("lg") {
+        border-bottom: none;
+      }
     }
   }
 }

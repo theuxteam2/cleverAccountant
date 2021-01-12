@@ -1,0 +1,21 @@
+.Service {
+  &-header {
+    &-image {
+      width: 100%;
+      background-color: #103872e0;
+      & > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-title {
+      padding: 2rem 0;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: #f6f6ff;
+      @include respond("lg") {
+        font-size: 36px;
+      }
+    }
+  }
+}
