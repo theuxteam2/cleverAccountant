@@ -31,7 +31,8 @@
     @include respond("lg") {
       padding-top: 8rem;
       height: 45vw;
-      background-size: 100% 100%;
+      background-size: 100% auto;
+
       background-repeat: no-repeat;
 
       & > * {
@@ -146,7 +147,7 @@
       }
     }
     &-text {
-      font-size: map-get($map: $theme-font-sizes, $key: "p2");
+      font-size: 14px;
     }
   }
 
@@ -160,6 +161,15 @@
         font-size: 36px;
         align-self: flex-start;
         margin-left: 25rem;
+      }
+    }
+    &-image {
+      & > img {
+        height: auto;
+        width: 208px;
+        @include respond("lg") {
+          width: 445px;
+        }
       }
     }
   }
@@ -188,6 +198,13 @@
     &-image {
       display: flex;
       justify-content: center;
+      & > img {
+        height: auto;
+        width: 302px;
+        @include respond("lg") {
+          width: 449px;
+        }
+      }
     }
     &-header {
       font-size: map-get($map: $theme-font-sizes, $key: "h1");
@@ -208,6 +225,17 @@
     }
     &-text {
       font-size: map-get($map: $theme-font-sizes, $key: "p1");
+    }
+    &-image {
+      display: flex;
+      justify-content: center;
+      & > img {
+        height: auto;
+        width: 303px;
+        @include respond("lg") {
+          width: 410px;
+        }
+      }
     }
   }
 

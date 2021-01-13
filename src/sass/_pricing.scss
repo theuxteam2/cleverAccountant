@@ -24,6 +24,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-position: 25%;
+  margin-top: -430px;
 }
 .carousel-item {
   @include respond("lg") {

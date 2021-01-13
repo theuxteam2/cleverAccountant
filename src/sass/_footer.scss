@@ -36,28 +36,30 @@
   .smalltext {
     font-size: 14px;
   }
-  
+
   .bigtext {
     font-size: 20px;
     padding-bottom: 5px;
     padding-top: 8px;
   }
-  
+
   .centertext {
     text-align: center;
   }
-  
+
   .footer-footer {
     padding: 20px;
   }
-  
+
   .hours > div > span:nth-child(2) {
     float: right;
   }
-  
+
+  #footer-hours-mobile {
+    display: none;
+  }
   // Mobile
   @media (max-width: 1000px) {
-
     // #footer
     text-align: center;
 
@@ -74,13 +76,13 @@
       display: block;
       margin-bottom: 25px;
     }
-  
+
     #footer-services {
       display: none;
     }
-  
+
     .mobile-btn {
-      background-color: #1F4E93;
+      background-color: #1f4e93;
       margin-bottom: 10px;
       box-shadow: 0 3pt 6pt #00000029;
     }
@@ -88,13 +90,15 @@
     .followus {
       font-size: 27px;
     }
-  
+
     .contact-info {
       :nth-child(1) {
         font-size: 21px;
         padding: 10px 0;
       }
-      :nth-child(2), :nth-child(4), :nth-child(5) {
+      :nth-child(2),
+      :nth-child(4),
+      :nth-child(5) {
         padding-bottom: 10px;
       }
     }
@@ -102,7 +106,5 @@
     #social img {
       padding: 5px 10px;
     }
-
   }
-
 }

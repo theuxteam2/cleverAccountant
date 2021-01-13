@@ -50,9 +50,13 @@ function js() {
 }
 
 function img() {
-    return gulp.src('src/img/*/*/*/*')
+    return gulp.src('src/img/**/**/**/*')
         .pipe(gulpIf(isProd, imagemin()))
         .pipe(gulp.dest('docs/img/'));
+}
+
+function fonts(){
+    return gulp.src('src/fonts/helveticaneue/*').pipe(gulp.dest('docs/fonts/'))
 }
 
 function serve() {
@@ -85,6 +89,7 @@ function del() {
 exports.css = css;
 exports.html = html;
 exports.js = js;
+exports.fonts = fonts;
 exports.del = del;
-exports.serve = gulp.parallel(html, css, js, img, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, img);
+exports.serve = gulp.parallel(html, css, js, img, watchFiles,fonts, serve);
+exports.default = gulp.series(del, html, css, js,fonts, img);

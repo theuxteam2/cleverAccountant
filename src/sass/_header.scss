@@ -3,7 +3,6 @@
   color: white;
   font-family: "Helvetica Neue";
   padding: 13px 0;
-
   .header-logo {
     font-size: 28px;
     padding-bottom: 5px;
@@ -30,7 +29,7 @@
   }
 
   .button {
-    background-color: #DFB13C;
+    background-color: #dfb13c;
     width: 119px;
     height: 38px;
     display: flex;
@@ -41,6 +40,5 @@
 
   // Mobile
   @media (max-width: 1000px) {
-
   }
 }

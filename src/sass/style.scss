@@ -24,11 +24,11 @@ $theme-font-sizes: (
 //FONT FACE
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("../fonts/helveticaneue/HelveticaNeue Light.ttf");
+  src: url("../fonts/HelveticaNeue Light.ttf");
 }
 @font-face {
   font-family: "Helvetica Neue";
-  src: url("../fonts/helveticaneue/Helvetica Neu Bold.ttf");
+  src: url("../fonts/Helvetica Neu Bold.ttf");
   font-weight: bold;
 }
 
@@ -52,3 +52,8 @@ $HelveticaNeue: "Helvetica Neue";
 @import "./navbar";
 @import "./pricing";
 @import "./service";
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

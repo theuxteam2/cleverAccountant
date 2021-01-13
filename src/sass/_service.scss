@@ -1,5 +1,9 @@
 .Service {
   &-header {
+    margin-bottom: 2rem;
+    @include respond("lg") {
+      margin-bottom: 0rem;
+    }
     &-image {
       width: 100%;
       background-color: #103872e0;
@@ -13,9 +17,259 @@
       font-size: 30px;
       font-weight: bold;
       background-color: #f6f6ff;
+      text-align: center;
+      @include respond("lg") {
+        font-size: 36px;
+        align-self: start;
+        padding-left: 10vw;
+        text-align: start;
+      }
+      &-white {
+        color: white;
+        font-size: 28px;
+        background-color: rgba(255, 255, 255, 0);
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        top: 22vw;
+        left: 6vw;
+        @include respond("lg") {
+          font-size: 58px;
+          top: 11vw;
+        }
+      }
+    }
+  }
+  & > section {
+    background-color: #f6f6ff;
+    @include respond("lg") {
+      padding: 0rem 10rem 0rem 10rem;
+    }
+    & > header {
+      overflow: hidden;
+      background-color: #214475;
+      padding: 2rem;
+      color: white;
+      font-size: 16px;
+      margin-bottom: 2rem;
+      @include respond("lg") {
+        margin-bottom: 1rem;
+      }
+      & > .Service-titles {
+        transition: all 0.5s;
+        display: flex;
+        width: 500%;
+
+        @include respond("lg") {
+          width: 100%;
+        }
+        & > * {
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+        }
+      }
+    }
+  }
+  &-cards {
+    max-height: 80vh;
+    overflow: scroll;
+    padding: 2rem;
+    scroll-snap-type: y mandatory;
+    @include respond("lg") {
+      max-height: initial;
+    }
+  }
+
+  &-card {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    scroll-snap-align: start;
+    @include respond("lg") {
+      height: initial;
+    }
+
+    &-contents {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
+      @include respond("lg") {
+        flex-direction: row;
+      }
+      & > * {
+        margin-bottom: 1rem;
+      }
+    }
+    &-circle {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border: 4px solid #214475;
+    }
+    &-line {
+      width: 4px;
+      background-color: #214475;
+      height: 100%;
+    }
+    &-title {
+      font-size: 22px;
+      font-weight: bold;
+      padding: 1rem;
+      text-align: center;
+      @include respond("lg") {
+        order: 2;
+        min-width: 170px;
+        max-width: 170px;
+      }
+    }
+    &-content {
+      order: 4;
+    }
+    &-button {
+      font-weight: bold;
+      padding: 1rem;
+      background-color: #43abc8;
+      border-radius: 5px;
+      color: white;
+      font-size: 11px;
+      &-large {
+        font-weight: bold;
+        padding: 1rem;
+        background-color: #43abc8;
+        border-radius: 5px;
+        color: white;
+        font-size: 11px;
+      }
+      @include respond("lg") {
+        order: 3;
+        display: none;
+      }
+      &-large {
+        display: none;
+        @include respond("lg") {
+          display: block;
+        }
+      }
+    }
+    &-img {
+      min-width: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 110px;
+      & > img {
+        width: auto;
+        height: 100%;
+      }
+      @include respond("lg") {
+        order: 1;
+      }
+    }
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+    &-right {
+      border: 1px solid #707070;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &-getting-started {
+    background-color: #e4ebf6 !important;
+    @include respond("lg") {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+    }
+    &-header {
+      justify-self: start;
+      background-color: #e4ebf6 !important;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: #2b2b2b !important;
+      @include respond("lg") {
+        align-self: start;
+      }
+    }
+  }
+  &-start {
+    font-size: 30px !important;
+    font-weight: bold !important;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+      &-container {
+        @include respond("lg") {
+          display: flex;
+          margin-bottom: 1rem;
+          padding: 2rem;
+        }
+      }
+    }
+    &-num {
+      margin-bottom: 1rem;
+    }
+    &-title {
+      font-size: 24px;
+    }
+    &-content {
+      font-size: 14px;
+      @include respond("lg") {
+        padding: 3rem;
+      }
+    }
+  }
+  &-see-less {
+    color: #43abc8;
+    font-size: 16px;
+    font-weight: bold;
+    @include respond("lg") {
+      display: none;
+    }
+  }
+  &-quote {
+    background-color: #43abc8;
+    color: white;
+    padding: 4rem;
+    &-header {
+      font-size: map-get($map: $theme-font-sizes, $key: "h1");
+      font-weight: bold;
       @include respond("lg") {
         font-size: 36px;
       }
+    }
+    &-content {
+      font-size: 28px;
+    }
+    &-button {
+      max-width: 15rem;
+    }
+  }
+  &-title {
+    &-month {
+      transform: translate(0, 0);
+    }
+    &-tax {
+      transform: translate(-20%, 0);
+    }
+    &-catch {
+      transform: translate(-40%, 0);
+    }
+    &-pay {
+      transform: translate(-60%, 0);
+    }
+    &-consult {
+      transform: translate(-80%, 0);
     }
   }
 }

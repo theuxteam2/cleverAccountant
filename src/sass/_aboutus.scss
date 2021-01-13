@@ -193,9 +193,9 @@
       }
     }
     &-button {
-      padding: 0 2rem 2rem 2rem;
+      padding: 2rem 2rem 2rem 2rem;
       @include respond("lg") {
-        width: 25% !important;
+        width: 25rem !important;
       }
     }
   }
