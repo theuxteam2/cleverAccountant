@@ -1,9 +1,10 @@
 (function(){
-   document.addEventListener("DOMContentLoaded", (event) => {
+   document.addEventListener("DOMContentLoaded", function(event) {
        
-       let cards = document.querySelector('.Service-cards')
+       let cards = document.querySelector('.Service-cards');
       
-       let title = document.querySelector('.Service-titles')
+       let title = document.querySelector('.Service-titles');
+       
        cards.addEventListener('scroll', check)
         
 
@@ -14,16 +15,6 @@
     function checkScroll (){
         let current = 0;
          let title = document.querySelector('.Service-titles');
-         let compute = window.getComputedStyle(title)
-        let computeWidth = compute.width;
-        let marginRight = compute.marginRight;
-        let section = (+computeWidth.slice(0,computeWidth-2))/5;
-        let curMR = +computeWidth.slice(0,marginRight-2);
-        console.log(section)
-        console.log(compute)
-        console.log(computeWidth)
-        console.log(curMR)
-        console.log(marginRight)
         
         return function(){
         if(this.scrollTop <= 32){
@@ -56,7 +47,6 @@
             title.classList.remove('Service-title-tax');
         } 
          else {
-            current === 4 ? null : current=4;
             title.classList.remove('Service-title-month');
             title.classList.remove('Service-title-catch');
             title.classList.remove('Service-title-pay');
