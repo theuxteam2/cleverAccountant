@@ -78,6 +78,9 @@
     scroll-snap-type: y mandatory;
     @include respond("lg") {
       max-height: initial;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 

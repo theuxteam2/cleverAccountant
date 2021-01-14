@@ -1,5 +1,248 @@
-<partial src='header.html'></partial>
+<partial src="header.html"></partial>
+<div class="Contact">
+  <div class="Contact-modal">
+    <div class="Contact-modal-close">
+      <img src="img/desktop/Contact Us/Close Button Red.png" alt="" />
+    </div>
+    <div class="Contact-modal-img d-lg-none">
+      <img src="img/logo_blue_background.png" alt="" />
+    </div>
+    <div
+      style="height: auto; margin: 0"
+      class="Home-info container ps-5 pe-5 pb-5 d-flex flex-column align-items-center"
+    >
+      <div
+        class="Home-info-box d-none d-lg-flex d-md-flex flex-md-row align-items-center flex-column d-flex"
+      >
+        <div class="Home-info-logo">
+          <img src="img/logo_transparent.png" alt="" />
+        </div>
+        <div class="">
+          <div class="Home-info-title">The Clever Accountants</div>
+          <div class="Home-info-content">
+            <ul class="d-flex flex-column align-items-center">
+              <li>(714)532-3002</li>
+              <li>info@thecleveraccountants.com</li>
+              <li>1665 E 4th St Ste 212</li>
+              <li>Santa Ana, Ca 92701</li>
+              <li>License #A296196</li>
+            </ul>
+          </div>
+        </div>
+        <div class="Home-info-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8359.41688024457!2d-117.8503466470051!3d33.749377762031024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd9708d4fffff%3A0xb13e4128ba3e6eef!2s1665%20E%204th%20St%20Ste%20212%2C%20Santa%20Ana%2C%20CA%2092701!5e0!3m2!1sen!2sus!4v1610321605731!5m2!1sen!2sus"
+            width="237"
+            height="154 "
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="Contact-modal-header d-lg-none">The Clever Accountants</div>
+    <div class="Contact-modal-text">
+      Thank you for contacting The Clever Accountants!
+    </div>
+    <div class="Contact-modal-text">
+      We have notified the team about your inquiry and will respond within 24-48
+      hours.
+    </div>
+    <div class="Contact-modal-text">
+      For a faster response time, please call us during business hours at (714)
+      532-3002.
+    </div>
+    <div class="Contact-modal-text">We hope you have a wonderful day.</div>
+    <div class="AutoFlexRow justify-content-lg-center">
+      <div class="Contact-modal-button">Continue Browsing Website</div>
+      <div class="Contact-modal-img-footer">
+        <img src="img/desktop/Contact Us/Pop Up Illustration.png" alt="" />
+      </div>
+    </div>
+  </div>
 
+  <div class="Contact-header">
+    <div class="Contact-header-image">
+      <div class="Contact-header-title-white">CONTACT US</div>
 
+      <img
+        src="img/desktop/Contact Us/desktop-hero_image_contact_us.png"
+        alt=""
+      />
+    </div>
+  </div>
 
-<partial src='footer.html'></partial>
+  <div class="AutoFlexRow p-lg-5">
+    <section class="Contact-section-form">
+      <form id="Contact-form" class="Contact-form">
+        <header class="Contact-form-header">
+          Do you still have a question? Let us help you! Feel free to contact us
+          through this form, by email, or by phone.
+        </header>
+        <div class="Contact-form-validation">
+          <span class="Contact-form-astrisk">*</span>These fields are required.
+        </div>
+        <div class="Contact-form-group">
+          <label for="Name" class="Contact-label">Full Name (required)</label>
+          <div class="Contact-input-group">
+            <input
+              type="text"
+              id="Name"
+              name="Name"
+              class="Contact-form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="Contact-form-group">
+          <label for="Email" class="Contact-label">Email (required)</label>
+          <div class="Contact-input-group">
+            <input
+              type="email"
+              id="Email"
+              name="Email"
+              class="Contact-form-control"
+              required
+            />
+          </div>
+        </div>
+        <div class="Contact-form-group">
+          <label for="Business" class="Contact-label">Business Name</label>
+          <div class="Contact-input-group">
+            <input
+              type="text"
+              id="Business"
+              name="Business"
+              class="Contact-form-control"
+            />
+          </div>
+        </div>
+        <div class="Contact-form-group">
+          <label for="Industry" class="Contact-label">Industry</label>
+          <div class="Contact-input-group">
+            <input
+              type="text"
+              id="Industry"
+              name="Industry"
+              class="Contact-form-control"
+            />
+          </div>
+        </div>
+        <div class="Contact-form-group">
+          <label for="phone" class="Contact-label">Phone Number</label>
+          <div class="Contact-input-group">
+            <input
+              type="text"
+              id="phone"
+              name="Phone Number"
+              class="Contact-form-control"
+            />
+          </div>
+        </div>
+
+        <div class="Contact-form-group">
+          <label for="communication" class="Contact-label"
+            >Preferred Method of Communication</label
+          >
+          <div class="Contact-input-group">
+            <select name="communication" id="communication">
+              <option value="call">Choose One</option>
+              <option value="call">Phone Call</option>
+              <option value="text">Text Message</option>
+              <option value="email">Email</option>
+            </select>
+          </div>
+        </div>
+        <div class="Contact-form-group">
+          <label for="packages" class="Contact-label">Services</label>
+          <div class="Contact-form-button-service">
+            <a href="/pricing.html">View Packages</a>
+          </div>
+          <div class="Contact-input-group">
+            <select name="packages" id="packages">
+              <option value="Simplistic package">Simplistic Package</option>
+              <option value="Learner Package">Learner Package</option>
+              <option value="Clever Package">Clever Package</option>
+              <option value="Custom Package">Custom Package</option>
+              <option value="Individual Service - Monthly Bookkeeping">
+                Individual Service - Monthly Bookkeeping
+              </option>
+              <option value="Individual Service - Tax Preparation">
+                Individual Service - Tax Preparation
+              </option>
+              <option value="Individual Service - Catch Up Accounting">
+                Individual Service - Catch Up Accounting
+              </option>
+              <option value="Individual Service - Payroll">
+                Individual Service - Payroll
+              </option>
+              <option value="Individual Service - New Business Consulting">
+                Individual Service - New Business Consulting
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="Contact-form-group">
+          <label for="Message" class="Contact-label">Your message</label>
+          <div class="Contact-input-group">
+            <textarea
+              id="Message"
+              name="Message"
+              class="Contact-form-control"
+              rows="6"
+              maxlength="3000"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="Contact-form-group">
+          <button type="submit" id="Contact-button" class="Contact-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+    <div class="Column-box">
+      <div class="Contact-info">
+        <div class="Contact-info-icon">
+          <img src="img/logo_blue_background.png" alt="" />
+        </div>
+        <div class="Contact-info-header">The Clever Accountants</div>
+        <div class="Contact-info-phone">
+          <div class="Contact-info-header">Telephone</div>
+          <div class="Contact-info-text">(714) 532.3002</div>
+        </div>
+        <div class="Contact-info-email">
+          <div class="Contact-info-header">Email</div>
+          <div class="Contact-infol-text">info@thecleveraccountants.com</div>
+        </div>
+        <div class="Contact-info-address">
+          <div class="Contact-info-header">Address</div>
+          <div class="Contact-info-text text-center">
+            1685 E 4th St Ste 212 Santa, Ana CA 92701 License #A296198
+          </div>
+        </div>
+      </div>
+
+      <div class="Contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8359.41688024457!2d-117.8503466470051!3d33.749377762031024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd9708d4fffff%3A0xb13e4128ba3e6eef!2s1665%20E%204th%20St%20Ste%20212%2C%20Santa%20Ana%2C%20CA%2092701!5e0!3m2!1sen!2sus!4v1610321605731!5m2!1sen!2sus"
+          width="auto"
+          height="154 "
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <partial src="footer.html"></partial>
+</div>

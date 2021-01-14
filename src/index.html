@@ -77,72 +77,74 @@
     </div>
   </div>
 
-  <div class="Home-service d-flex flex-column align-items-center mt-3 p-md-5">
-    <div class="Home-service-header mb-4">Services</div>
-    <div class="Home-service-container d-md-flex">
-      <div class="Home-service-image d-flex justify-content-center">
-        <img
-          srcset="
-            img/mobile/services-illustration@2x.png 2x,
-            img/desktop/Homepage/Accounting.png     1x
-          "
-          src="img/desktop/Homepage/Accounting.png"
-          alt=""
-        />
+  <div class="Home-services">
+    <div class="Home-service d-flex flex-column align-items-center mt-3 p-md-5">
+      <div class="Home-service-header mb-4">Services</div>
+      <div class="Home-service-container d-md-flex">
+        <div class="Home-service-image d-flex justify-content-center">
+          <img
+            srcset="
+              img/mobile/services-illustration@2x.png 2x,
+              img/desktop/Homepage/Accounting.png     1x
+            "
+            src="img/desktop/Homepage/Accounting.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="Home-accounting container pt-3 ps-5 pe-5 pb-5 d-flex flex-column align-items-center col-md-4"
+        >
+          <div class="Home-accounting-header mt-4 mb-4">Accounting</div>
+          <div class="Home-accounting-text mb-4">
+            We check and balance your account down to the penny and prepare you
+            for the tax season.
+          </div>
+          <div class="button-primary-light ps-5 pe-5 mb-4">Learn More</div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="Home-tax container pt-3 ps-5 pe-5 pb-5 d-flex flex-column align-items-center align-items-md-end"
+    >
+      <div class="Home-tax-container d-md-flex justify-content-md-end">
+        <div class="Home-tax-image">
+          <img
+            src="img/mobile/tax-services-illustration.png"
+            srcset="
+              img/mobile/tax-services-illustration@2x.png 2x,
+              img/mobile/tax-services-illustration.png    1x
+            "
+            alt=""
+          />
+        </div>
+        <div class="d-flex flex-column align-items-center col-md-4">
+          <div class="Home-tax-header mt-4 mb-4">Tax Services</div>
+          <div class="Home-tax-text mb-4">
+            With the upcoming tax season, we assist with tax preparation to give
+            you the most out of your returns.
+          </div>
+          <div class="button-primary-light ps-5 pe-5 mb-4">Learn More</div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="Home-tax container pt-3 ps-5 pe-5 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-md-start"
+    >
+      <div class="Home-consulting-image">
+        <img src="img/mobile/consulting-illustration.png" alt="" />
       </div>
       <div
-        class="Home-accounting container pt-3 ps-5 pe-5 pb-5 d-flex flex-column align-items-center col-md-4"
+        class="d-flex flex-column justify-content-center align-items-center col-md-4"
       >
-        <div class="Home-accounting-header mt-4 mb-4">Accounting</div>
-        <div class="Home-accounting-text mb-4">
-          We check and balance your account down to the penny and prepare you
-          for the tax season.
+        <div class="Home-consulting-header mt-4 mb-4">Consulting</div>
+        <div class="Home-consulting-text mb-4">
+          Are you ready to take your business to the next level? Give us a call
+          to strategize your next business move!
         </div>
         <div class="button-primary-light ps-5 pe-5 mb-4">Learn More</div>
       </div>
-    </div>
-  </div>
-
-  <div
-    class="Home-tax container pt-3 ps-5 pe-5 pb-5 d-flex flex-column align-items-center align-items-md-end"
-  >
-    <div class="Home-tax-container d-md-flex justify-content-md-end">
-      <div class="Home-tax-image">
-        <img
-          src="img/mobile/tax-services-illustration.png"
-          srcset="
-            img/mobile/tax-services-illustration@2x.png 2x,
-            img/mobile/tax-services-illustration.png    1x
-          "
-          alt=""
-        />
-      </div>
-      <div class="d-flex flex-column align-items-center col-md-4">
-        <div class="Home-tax-header mt-4 mb-4">Tax Services</div>
-        <div class="Home-tax-text mb-4">
-          With the upcoming tax season, we assist with tax preparation to give
-          you the most out of your returns.
-        </div>
-        <div class="button-primary-light ps-5 pe-5 mb-4">Learn More</div>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="Home-tax container pt-3 ps-5 pe-5 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-md-start"
-  >
-    <div class="Home-consulting-image">
-      <img src="img/mobile/consulting-illustration.png" alt="" />
-    </div>
-    <div
-      class="d-flex flex-column justify-content-center align-items-center col-md-4"
-    >
-      <div class="Home-consulting-header mt-4 mb-4">Consulting</div>
-      <div class="Home-consulting-text mb-4">
-        Are you ready to take your business to the next level? Give us a call to
-        strategize your next business move!
-      </div>
-      <div class="button-primary-light ps-5 pe-5 mb-4">Learn More</div>
     </div>
   </div>
 
@@ -172,15 +174,17 @@
       <div class="Home-info-logo">
         <img src="img/logo_transparent.png" alt="" />
       </div>
-      <div class="Home-info-title">The Clever Accountants</div>
-      <div class="Home-info-content">
-        <ul class="d-flex flex-column align-items-center">
-          <li>(714)532-3002</li>
-          <li>info@thecleveraccountants.com</li>
-          <li>1665 E 4th St Ste 212</li>
-          <li>Santa Ana, Ca 92701</li>
-          <li>License #A296196</li>
-        </ul>
+      <div class="Auto-flex-column justify-lg-content-between">
+        <div class="Home-info-title">The Clever Accountants</div>
+        <div class="Home-info-content">
+          <ul class="d-flex flex-column align-items-center">
+            <li>(714)532-3002</li>
+            <li>info@thecleveraccountants.com</li>
+            <li>1665 E 4th St Ste 212</li>
+            <li>Santa Ana, Ca 92701</li>
+            <li>License #A296196</li>
+          </ul>
+        </div>
       </div>
       <div class="Home-info-map">
         <iframe

@@ -193,7 +193,6 @@
   &-tax {
     font-family: $HelveticaNeue;
     @include respond("lg") {
-      padding: 0 20rem 0 30rem !important;
     }
     &-image {
       display: flex;
@@ -286,6 +285,8 @@
       @include respond("md") {
         transform: translate(0, 2rem);
         padding: 1rem;
+        width: 75%;
+        justify-content: space-around;
       }
     }
     &-logo {
