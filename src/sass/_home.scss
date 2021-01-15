@@ -28,12 +28,14 @@
       }
     }
     @include respond("lg") {
-      padding-top: 8rem;
+      padding-top: 11vw;
+      padding-left: 5vw;
       height: 45vw;
       background-image: url("../img/mobile/hero-image-background-homepage@2x.png");
       position: relative;
 
       background-repeat: no-repeat;
+
       &:before {
         content: "&nbsp;";
         position: absolute;
@@ -87,12 +89,6 @@
         height: auto;
         background-image: url("../img/desktop/Homepage/Graph.png");
         background-size: cover;
-        @include respond("lg") {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 120%;
-        }
       }
       &-large {
         @include respond("md") {
@@ -102,7 +98,13 @@
           right: 15%;
           position: absolute;
         }
+        @include respond("lg") {
+          position: absolute;
+          background-size: cover;
+          width: 60%;
+        }
       }
+
       &-small {
       }
     }
