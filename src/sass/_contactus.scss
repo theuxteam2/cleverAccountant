@@ -4,6 +4,14 @@
   flex-direction: column;
   align-items: center;
   transition: 0.4s;
+  position: relative;
+  &-overlay {
+    width: 100vw;
+    height: 100%;
+    background-color: #7070708c;
+    position: absolute;
+    display: none;
+  }
   &-header {
     margin-bottom: 2rem;
     position: relative;
@@ -59,6 +67,7 @@
         & > input {
           width: 100%;
           padding-left: 10px;
+          font-weight: bold;
         }
         & > select {
           width: 100%;
@@ -72,8 +81,13 @@
         }
       }
     }
+
     &-header {
       margin-bottom: 1rem;
+      &-title {
+        font-size: 2rem;
+        font-weight: bold;
+      }
     }
   }
   &-button {
@@ -87,6 +101,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 3rem;
   }
   &-info {
     display: flex;
@@ -101,6 +116,11 @@
     }
     &-header {
       font-weight: bold;
+      font-style: 20px;
+      &-main {
+        font-size: 24px;
+        font-weight: bold;
+      }
     }
     &-address {
       & div:nth-child(2) {
@@ -126,9 +146,11 @@
     padding: 2rem;
     display: none;
     border-radius: 14px;
+
     @include respond("lg") {
       align-items: stretch;
       width: 70%;
+      top: 15rem;
     }
     &-display {
       display: flex;
@@ -154,7 +176,7 @@
       &-footer {
         @include respond("lg") {
           position: absolute;
-          right: 8%;
+          right: 22%;
           bottom: 5%;
         }
       }
@@ -171,6 +193,10 @@
       border-radius: 9px;
       color: #ffffff;
       margin-bottom: 2rem;
+      cursor: pointer;
     }
+  }
+  &-label {
+    font-weight: bold;
   }
 }

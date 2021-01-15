@@ -39,6 +39,8 @@
     &-img {
       width: 100%;
       height: 25vw;
+      position: relative;
+
       & > img {
         width: 100%;
         height: 100%;
@@ -53,6 +55,17 @@
       @include respond("lg") {
         font-size: 36px;
         text-align: initial;
+      }
+      &-white {
+        position: absolute;
+        color: white;
+        top: 10%;
+        left: 10%;
+        font-size: 28px;
+        font-family: $BebasNeue;
+        @include respond("lg") {
+          font-size: 58px;
+        }
       }
     }
   }

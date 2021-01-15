@@ -12,6 +12,7 @@
        if(name){
         name.addEventListener('invalid', validate);
        
+       
 
        }
        var email = document.querySelector('#Email')
@@ -20,6 +21,17 @@
 
 
        }
+       var modalButton = document.querySelector('.Contact-modal-button')
+       if(modalButton){
+         modalButton.addEventListener('click', toggleModal);
+
+
+       }
+
+        var seeLessButton = document.querySelector('.Service-see-less');
+        if(seeLessButton){
+            seeLessButton.addEventListener('click', toggleLess)
+        }
 
        var closeButton = document.querySelector('.Contact-modal-close');
        if(closeButton){
@@ -47,10 +59,13 @@
     var check = debounce(checkScroll(),100)
 
     var title;
+    var currentCircle 
     function checkScroll (){
         var current = 0;
         title = document.querySelector('.Service-titles');
-        
+
+        circles = document.querySelectorAll('.Service-card-circle')
+       
         return function(){
         if(this.scrollTop <= 32){
             
@@ -59,6 +74,7 @@
             title.classList.remove('Service-title-pay');
             title.classList.remove('Service-title-consult');
             title.classList.remove('Service-title-tax');
+            toggleFill(circles,0)
         }
         else if (this.scrollTop > 32 && this.scrollTop <= 632){
             title.classList.remove('Service-title-month');
@@ -66,6 +82,7 @@
             title.classList.remove('Service-title-pay');
             title.classList.remove('Service-title-consult');
             title.classList.add('Service-title-tax');
+            toggleFill(circles,1)
 
         } else if (this.scrollTop > 632 && this.scrollTop <= 1232){
            title.classList.remove('Service-title-month');
@@ -73,6 +90,7 @@
             title.classList.remove('Service-title-pay');
             title.classList.remove('Service-title-consult');
             title.classList.remove('Service-title-tax');
+            toggleFill(circles,2)
         } 
         else if (this.scrollTop > 1232 && this.scrollTop <=1832){
             title.classList.remove('Service-title-month');
@@ -80,6 +98,9 @@
             title.classList.add('Service-title-pay');
             title.classList.remove('Service-title-consult');
             title.classList.remove('Service-title-tax');
+            toggleFill(circles,3)
+
+            
         } 
          else {
             title.classList.remove('Service-title-month');
@@ -87,14 +108,42 @@
             title.classList.remove('Service-title-pay');
             title.classList.add('Service-title-consult');
             title.classList.remove('Service-title-tax');
+            toggleFill(circles,4)
+
         }
         }
+
+
         
     }
 
     //UTILITY FUNCTION
     function sendEmail(){
 
+    }
+    var seeLess 
+    function toggleLess(){
+        document.querySelector('.Service-start-box-container').classList.toggle('Service-start-box-hide');
+        seeLess = document.querySelector('.Service-see-less')
+        
+        if(seeLess.innerHTML === 'See less'){
+            seeLess.innerHTML = 'See more'
+        } else if(seeLess.innerHTML ==='See more') {
+            seeLess.innerHTML = 'See less'
+        }
+        
+    }
+
+    function toggleFill(elements, num){
+        console.log(num)
+        for (var i = 0; i < elements.length; i++) {
+            console.log(i)
+            if(i === num){
+                elements[i].style.backgroundColor = '#214475'
+            } else {
+                elements[i].style.backgroundColor = 'white'
+            }
+}
     }
    
     function validate(e){
@@ -107,6 +156,8 @@
     }
     function toggleModal(){
         document.querySelector('.Contact-modal').classList.toggle('Contact-modal-display');
+        document.querySelector('.Contact-overlay').classList.toggle('Contact-modal-display');
+
         window.scrollTo({
             top: 0,
             left: 0,

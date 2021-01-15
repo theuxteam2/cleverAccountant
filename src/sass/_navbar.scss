@@ -2,11 +2,15 @@
 
 .navbar {
   position: relative;
-  padding: 1rem !important;
+  padding: 1rem;
+  padding-bottom: 0;
 
   @include respond("lg") {
     padding-right: 5rem !important;
     padding-left: 5rem !important;
+    width: 100%;
+    z-index: 106;
+    background: #214475;
   }
   &-brand {
     &-title {
@@ -16,13 +20,17 @@
     }
   }
   &-box {
-    padding: 1rem !important;
+    padding-top: 7vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
     position: relative;
     z-index: 1;
+    @include respond("lg") {
+      padding: 1vw;
+    }
 
     &-left {
       @include respond("lg") {
@@ -58,6 +66,10 @@
     height: 1.7rem;
     display: flex;
     align-items: center;
+    @include respond("lg") {
+      width: 2.7rem;
+      height: 2.7rem;
+    }
     & > div {
       margin-left: 1rem;
     }
@@ -76,10 +88,10 @@
   &-overlay {
     left: 0;
     width: 100vw;
-    height: 85%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.384);
     position: absolute;
-    top: 21vw;
+    top: 6rem;
     @include respond("md") {
       display: none;
     }
@@ -90,10 +102,14 @@
     @include respond("lg") {
       display: none !important;
     }
+    &-img {
+      margin-bottom: 0 !important;
+    }
     & > * {
       color: white;
       margin-bottom: 1rem;
     }
+
     &-phone {
       & > span {
         display: inline-block;
@@ -112,6 +128,7 @@
     text-indent: 5px;
     @include respond("lg") {
       text-indent: 0;
+      margin-right: 3rem;
     }
   }
   &-item {

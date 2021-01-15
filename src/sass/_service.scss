@@ -6,6 +6,7 @@
     }
     &-image {
       width: 100%;
+      position: relative;
       background-color: #103872e0;
       & > img {
         width: 100%;
@@ -21,8 +22,8 @@
       @include respond("lg") {
         font-size: 36px;
         align-self: start;
-        padding-left: 10vw;
         text-align: start;
+        padding: 2vw 8vw;
       }
       &-white {
         color: white;
@@ -31,11 +32,10 @@
         text-transform: uppercase;
         font-weight: bold;
         position: absolute;
-        top: 22vw;
         left: 6vw;
         @include respond("lg") {
           font-size: 58px;
-          top: 11vw;
+          top: 4vw;
         }
       }
     }
@@ -43,7 +43,7 @@
   & > section {
     background-color: #f6f6ff;
     @include respond("lg") {
-      padding: 0rem 10rem 0rem 10rem;
+      padding: 2vw 8vw;
     }
     & > header {
       overflow: hidden;
@@ -103,6 +103,9 @@
       }
       & > * {
         margin-bottom: 1rem;
+        @include respond("lg") {
+          margin-right: 5rem;
+        }
       }
     }
     &-circle {
@@ -115,19 +118,23 @@
       width: 4px;
       background-color: #214475;
       height: 100%;
+      &-1 {
+        background-color: #214475;
+      }
     }
     &-title {
       font-size: 22px;
       font-weight: bold;
-      padding: 1rem;
+      padding: 0rem;
       text-align: center;
       @include respond("lg") {
         order: 2;
-        min-width: 170px;
-        max-width: 170px;
+        max-width: 145px;
+        min-width: 145px;
       }
     }
     &-content {
+      font-size: 15px;
       order: 4;
     }
     &-button {
@@ -157,17 +164,22 @@
       }
     }
     &-img {
-      min-width: 110px;
+      width: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 110px;
-      & > img {
-        width: auto;
-        height: 100%;
-      }
+      margin-bottom: 0.5rem;
       @include respond("lg") {
         order: 1;
+        min-width: 100px;
+      }
+      & > img {
+        width: 100%;
+        height: auto;
+        @include respond("lg") {
+          width: 68%;
+          height: auto;
+        }
       }
     }
 
@@ -179,12 +191,13 @@
     }
     &-right {
       border: 1px solid #707070;
-      padding: 1rem;
+      padding: 0rem;
       margin-bottom: 2rem;
     }
   }
   &-getting-started {
     background-color: #e4ebf6 !important;
+    overflow: hidden;
     @include respond("lg") {
       display: flex;
       flex-direction: column;
@@ -218,6 +231,9 @@
           padding: 2rem;
         }
       }
+      &-hide {
+        display: none;
+      }
     }
     &-num {
       margin-bottom: 1rem;
@@ -236,14 +252,27 @@
     color: #43abc8;
     font-size: 16px;
     font-weight: bold;
+    margin-top: 2rem;
+
     @include respond("lg") {
       display: none;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
   &-quote {
     background-color: #43abc8;
     color: white;
     padding: 4rem;
+    @include respond("lg") {
+      justify-content: center;
+    }
+    & > div {
+      @include respond("lg") {
+        width: 50%;
+      }
+    }
     &-header {
       font-size: map-get($map: $theme-font-sizes, $key: "h1");
       font-weight: bold;
@@ -256,6 +285,11 @@
     }
     &-button {
       max-width: 15rem;
+      & > div {
+        @include respond("lg") {
+          padding: 2rem 3rem;
+        }
+      }
     }
   }
   &-title {

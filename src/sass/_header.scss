@@ -2,7 +2,9 @@
   background-color: #214475;
   color: white;
   font-family: "Helvetica Neue";
-  padding: 13px 0;
+  padding: 0 0;
+  &-info {
+  }
   .header-logo {
     font-size: 28px;
     padding-bottom: 5px;
@@ -41,4 +43,9 @@
   // Mobile
   @media (max-width: 1000px) {
   }
+}
+
+.bigtext {
+  font-size: 21px;
+  font-weight: bold;
 }
