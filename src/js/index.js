@@ -6,13 +6,11 @@
        if(card){
        card.addEventListener('scroll', check);
        }
-   
+    toggleModal();
         //Contact page validation
        var name = document.querySelector('#Name')
        if(name){
         name.addEventListener('invalid', validate);
-       
-       
 
        }
        var email = document.querySelector('#Email')
@@ -27,7 +25,6 @@
 
 
        }
-
         var seeLessButton = document.querySelector('.Service-see-less');
         if(seeLessButton){
             seeLessButton.addEventListener('click', toggleLess)
@@ -45,7 +42,7 @@
               Email.send({
                     SecureToken : "798b09de-95ac-4f38-9cec-6f4bb9f2bc33",
                     To : 'info@thecleveraccountants.com',
-                    From : "".concat(document.querySelector('#Email').value),
+                    From : 'info@thecleveraccountants.com',
                     Subject : "".concat(document.querySelector('#packages').value),
                     Body : "\n                    <div className=\"\">\n                        Name: ".concat(document.querySelector('#Name').value, " <br/>\n                        Email: ").concat(document.querySelector('#Email').value, " <br/>\n                        Business name : ").concat(document.querySelector('#Business').value, "  <br/>\n                        Industry : ").concat(document.querySelector('#Industry').value, " <br/>\n                        Phone Number : ").concat(document.querySelector('#phone').value, " <br/>\n                        Preferred Method of Communication : ").concat(document.querySelector('#communication').value, "\n                        <br/> <br/>\n                        ").concat(document.querySelector('#Message').value, "\n\n                    </div>\n                    ")
                 }).then(
@@ -125,7 +122,7 @@
     function toggleLess(){
         document.querySelector('.Service-start-box-container').classList.toggle('Service-start-box-hide');
         seeLess = document.querySelector('.Service-see-less')
-        
+        console.log('see')
         if(seeLess.innerHTML === 'See less'){
             seeLess.innerHTML = 'See more'
         } else if(seeLess.innerHTML ==='See more') {
@@ -149,7 +146,8 @@
     function validate(e){
         e.preventDefault();
         
-        document.querySelector("label[for=".concat((void 0).id, "]")).style.color= 'red'
+        document.querySelector("label[for='Name']").style.color= 'red'
+        document.querySelector("label[for='Email']").style.color= 'red'
 
         document.querySelector('.Contact-form-validation').style.display ='block';
         
@@ -157,6 +155,8 @@
     function toggleModal(){
         document.querySelector('.Contact-modal').classList.toggle('Contact-modal-display');
         document.querySelector('.Contact-overlay').classList.toggle('Contact-modal-display');
+        document.querySelector("label[for='Name']").style.color= 'white'
+        document.querySelector("label[for='Email']").style.color= 'white'
 
         window.scrollTo({
             top: 0,
