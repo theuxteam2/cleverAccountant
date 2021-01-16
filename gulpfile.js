@@ -45,7 +45,6 @@ function js() {
             hideConsole: true
         }))
         .pipe(concat('all.js'))
-        .pipe(gulpIf(isProd, uglify()))
         .pipe(gulp.dest('docs/js'));
 }
 

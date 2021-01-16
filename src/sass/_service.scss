@@ -1,3 +1,9 @@
+#service {
+  &-1 {
+  }
+  &-4 {
+  }
+}
 .Service {
   &-header {
     margin-bottom: 2rem;
@@ -32,10 +38,14 @@
         text-transform: uppercase;
         font-weight: bold;
         position: absolute;
-        left: 6vw;
+        font-family: $BebasNeue;
+        top: 10%;
+        left: 10%;
+
         @include respond("lg") {
           font-size: 58px;
-          top: 4vw;
+          top: 10%;
+          left: 10%;
         }
       }
     }
@@ -72,11 +82,12 @@
     }
   }
   &-cards {
-    max-height: 80vh;
+    max-height: 70vh;
     overflow: scroll;
-    padding: 2rem;
+    padding: 1rem;
     scroll-snap-type: y mandatory;
     @include respond("lg") {
+      padding: 2rem;
       max-height: initial;
       &::-webkit-scrollbar {
         display: none;
@@ -89,6 +100,7 @@
     display: flex;
     justify-content: center;
     scroll-snap-align: start;
+
     @include respond("lg") {
       height: initial;
     }
@@ -144,6 +156,9 @@
       border-radius: 5px;
       color: white;
       font-size: 11px;
+      &:hover {
+        cursor: pointer;
+      }
       &-large {
         font-weight: bold;
         padding: 1rem;
@@ -151,6 +166,9 @@
         border-radius: 5px;
         color: white;
         font-size: 11px;
+        &:hover {
+          cursor: pointer;
+        }
       }
       @include respond("lg") {
         order: 3;
@@ -210,6 +228,7 @@
       align-items: center;
       flex-direction: column;
       color: #2b2b2b !important;
+      margin-bottom: 0 !important;
       @include respond("lg") {
         align-self: start;
       }
@@ -264,7 +283,7 @@
   &-quote {
     background-color: #43abc8;
     color: white;
-    padding: 4rem;
+    padding: 3rem;
     @include respond("lg") {
       justify-content: center;
     }
@@ -293,6 +312,8 @@
     }
   }
   &-title {
+    font-size: 20px;
+
     &-month {
       transform: translate(0, 0);
     }

@@ -17,27 +17,28 @@
     background-size: cover;
     position: relative;
     z-index: 2;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 
     @include respond("md") {
-      background-image: url("../img/mobile/hero-image-background-homepage@2x.png");
       margin: 0;
       height: 50vw;
-      padding-top: 2rem;
       & > * {
         max-width: 80%;
       }
     }
     @include respond("lg") {
-      padding-top: 11vw;
+      padding-top: 2vw;
       padding-left: 5vw;
       height: 45vw;
-      background-image: url("../img/mobile/hero-image-background-homepage@2x.png");
       position: relative;
-
+      justify-content: start;
+      align-items: start;
       background-repeat: no-repeat;
 
       &:before {
-        content: "&nbsp;";
+        content: "|\00a0\00a0";
         position: absolute;
         width: 100%;
         height: 100%;
@@ -50,6 +51,10 @@
       & > * {
         transform: translate(4rem);
       }
+    }
+    @include respond("xxl") {
+      padding-left: 11vw;
+      padding-top: 4vw;
     }
     &-overlay {
       display: block;
@@ -64,7 +69,8 @@
       }
     }
     &-header {
-      padding: 1rem;
+      padding: 2rem;
+      padding-bottom: 0;
       z-index: 2;
       position: relative;
 
@@ -72,11 +78,15 @@
         color: map-get($map: $theme-colors, $key: "white");
         font-size: 25px;
         font-family: $BebasNeue;
+
         @include respond("md") {
           font-size: 30px;
         }
         @include respond("lg") {
           font-size: 58px;
+        }
+        @include respond("xxl") {
+          font-size: 72px;
         }
       }
     }
@@ -87,13 +97,31 @@
       & > img {
         width: 100%;
         height: auto;
-        background-image: url("../img/desktop/Homepage/Graph.png");
-        background-size: cover;
+      }
+      &-arrow {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        color: white;
+        width: 2rem;
+        height: 2rem;
+        @include respond("lg") {
+          width: 5rem;
+          height: 5rem;
+          left: 47%;
+        }
+        & > img {
+          width: 100%;
+          height: auto;
+          transform: translate(-50%, -0rem);
+          @include respond("lg") {
+            width: 5rem;
+            transform: translate(-50%, -4rem);
+          }
+        }
       }
       &-large {
         @include respond("md") {
-          background-repeat: no-repeat;
-          background-image: url("../img/desktop/Homepage/Graph.png");
           bottom: 0;
           right: 15%;
           position: absolute;
@@ -101,11 +129,11 @@
         @include respond("lg") {
           position: absolute;
           background-size: cover;
-          width: 60%;
+          width: 67%;
         }
-      }
-
-      &-small {
+        @include respond("xxl") {
+          right: 7%;
+        }
       }
     }
     &-content {
@@ -120,19 +148,26 @@
       }
       &-text {
         font-weight: normal;
+        padding: 1rem;
       }
       &-button {
         z-index: 2;
         position: relative;
+        margin: 2.5rem 0;
         @include respond("md") {
           max-width: 25%;
+          margin: 1.5rem 0;
         }
         @include respond("lg") {
-          max-width: 15%;
+          margin: 0;
+          max-width: 20%;
           & > div {
             font-size: 28px;
             font-weight: bold;
           }
+        }
+        @include respond("xxl") {
+          margin-left: 1rem;
         }
       }
     }
@@ -141,6 +176,15 @@
   &-why {
     background-color: map-get($map: $theme-colors, $key: "primary-light");
     font-family: $HelveticaNeue;
+
+    &-content {
+      & > * {
+        margin-bottom: 2rem;
+        @include respond("lg") {
+          padding: 0 6rem;
+        }
+      }
+    }
     &-img {
       height: 5.8rem;
       @include respond("lg") {
@@ -155,7 +199,10 @@
       & > header {
         font-size: 28px;
         font-weight: bold;
+        padding: 2rem;
+
         @include respond("lg") {
+          padding: 5rem;
           font-size: 36px;
         }
       }
@@ -163,6 +210,7 @@
     &-title {
       font-size: map-get($map: $theme-font-sizes, $key: "h3");
       font-weight: bold;
+      min-height: 60px;
       @include respond("lg") {
         font-size: 20px;
       }
@@ -186,7 +234,7 @@
       text-align: center;
       @include respond("lg") {
         font-size: 36px;
-        align-self: flex-start;
+        align-self: center;
         text-align: left;
       }
     }
@@ -203,6 +251,7 @@
 
   &-accounting {
     font-family: $HelveticaNeue;
+    margin-bottom: 5rem;
     @include respond("md") {
       align-self: start;
     }
@@ -220,6 +269,9 @@
   &-tax {
     font-family: $HelveticaNeue;
     @include respond("lg") {
+    }
+    &-container {
+      margin-bottom: 3rem;
     }
     &-image {
       display: flex;
@@ -295,6 +347,7 @@
       }
       @include respond("lg") {
         & > div {
+          padding: 2rem 3rem;
           font-size: 28px;
           padding: 1rem !important;
         }
@@ -307,9 +360,10 @@
     margin-top: 3rem;
     @include respond("md") {
       height: 55vw;
+      margin-top: 0rem;
     }
     &-box {
-      background-color: rgba(255, 255, 255, 0.75);
+      background-color: rgba(255, 255, 255, 0.8);
       & > * {
         margin-bottom: 2rem;
       }
@@ -333,8 +387,8 @@
         height: 12rem;
       }
       & > img {
-        width: 4.25rem;
-        height: 4.25rem;
+        width: 6.25rem;
+        height: 6.25rem;
         @include respond("md") {
           width: 7rem;
           height: 7rem;
@@ -361,7 +415,7 @@
         list-style-type: none;
         padding: 0;
         & > * {
-          font-size: 16px;
+          font-size: 20px;
         }
       }
     }
@@ -382,27 +436,62 @@
     font-family: $HelveticaNeue;
     @include respond("md") {
     }
-    &-header {
-      &-small {
-        display: block;
+    & > * {
+      margin-bottom: 1rem;
+    }
+    & > *:nth-child(2) {
+      margin-bottom: 2rem;
+    }
+    &-content {
+      margin-bottom: 1rem;
+
+      &-header {
+        &-small {
+          display: block;
+          font-size: 24px;
+          font-weight: bold;
+          @include respond("lg") {
+            display: none;
+          }
+        }
+        &-large {
+          @include respond("lg") {
+            font: $HelveticaNeue;
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+      }
+      &-title {
         font-size: 24px;
         font-weight: bold;
-        @include respond("lg") {
-          display: none;
-        }
-      }
-      &-large {
-        @include respond("lg") {
-          font: $HelveticaNeue;
-          display: block;
-          font-size: 2rem;
-          font-weight: bold;
-        }
       }
     }
-    &-title {
-      font-size: 24px;
-      font-weight: bold;
+  }
+}
+.read-more {
+  &:hover {
+    cursor: pointer;
+  }
+  &-content {
+    display: none;
+  }
+  &-show {
+    display: block;
+  }
+}
+
+.learn-more {
+  &-small {
+    @include respond("md") {
+      display: none;
+    }
+  }
+  &-big {
+    display: none;
+    @include respond("md") {
+      display: block;
     }
   }
 }

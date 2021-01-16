@@ -3,6 +3,9 @@
   color: white;
   font-family: "Helvetica Neue";
   padding: 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   &-info {
   }
   .header-logo {

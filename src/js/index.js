@@ -1,12 +1,34 @@
 (function(){
     //MOVE TITLE PRICING
    document.addEventListener("DOMContentLoaded", function(event) {
-    
+        if(localStorage.getItem('package')){
+            console.log(localStorage.getItem('package'))
+            location.href='#service-1'; 
+            var package = localStorage.getItem('package')
+            localStorage.removeItem('package');
+            var cards = document.querySelector('.Service-cards');
+            if(package === 'service-4'){
+                cards.scrollTop = 1200
+            }
+            if(package === 'service-3'){
+                cards.scrollTop = 800
+            }
+            if(package === 'service-6'){
+                cards.scrollTop = 2400
+            }
+          
+           
+
+        }
+       var package = document.querySelector('#packages')
+       if(package){
+           package.value = localStorage.getItem('services')
+       }
+        
        var card = document.querySelector('.Service-cards')
        if(card){
        card.addEventListener('scroll', check);
        }
-    toggleModal();
         //Contact page validation
        var name = document.querySelector('#Name')
        if(name){
@@ -35,6 +57,53 @@
            closeButton.addEventListener('click', toggleModal)
        }
 
+        var learnMoreButtons = document.querySelectorAll('.read-more')
+        if(learnMoreButtons){
+            [...learnMoreButtons].forEach( function(e) {
+                e.addEventListener('click', function (){
+                    if(this.innerHTML === 'Read More') {
+                        this.innerHTML = 'View Less'
+                    } else {
+                        this.innerHTML = 'Read More'
+                    }
+                    this.nextElementSibling.classList.toggle('read-more-show')
+                })
+            })
+        }
+
+       
+        var bookingButtons = document.querySelectorAll('.Service-card-button-large');
+        if(bookingButtons){
+            [...bookingButtons].forEach(function(elem) {
+                elem.addEventListener('click', function(e){
+                    localStorage.setItem('services', (this.getAttribute('data-service')))
+                    window.location.assign('/contactus.html')
+                })
+            })
+        }
+
+        var pricingButtons = document.querySelectorAll('.Pricing-card-button');
+        if(pricingButtons){
+            [...pricingButtons].forEach(function(elem) {
+                elem.addEventListener('click', function(e){
+                    localStorage.setItem('services', (this.getAttribute('data-service')))
+                    window.location.assign('/contactus.html')
+                })
+            })
+        }
+
+        var linkToServicePageLgBtn = document.querySelectorAll('.learn-more-small');
+        if(linkToServicePageLgBtn){
+            [...linkToServicePageLgBtn].forEach( function(elem){
+                elem.addEventListener('click', function(e){
+                    e.preventDefault();
+                    localStorage.setItem('package', this.getAttribute('data-package'))
+                    window.location.assign("/service.html")
+                    })
+
+            })
+        }
+        
        var form = document.querySelector('#Contact-form')
        if(form){
            form.addEventListener('submit', function(e){
@@ -50,7 +119,37 @@
                 );
            })
        }
+        
+            // The function actually applying the offset
+            function offsetAnchor() {
+            if (location.hash.length !== 0) {
+                var titleService = document.querySelector('#service-1');
 
+                if(titleService){
+                    console.log(titleService.getBoundingClientRect())
+                }
+
+                
+                window.scrollTo(window.scrollX, titleService.getBoundingClientRect().top);
+            }
+            }
+
+            // Set the offset when entering page with hash present in the url
+            window.setTimeout(offsetAnchor, 0);
+
+
+        var serviceCards= document.querySelector('.Service-cards')
+        if(serviceCards){
+            serviceCards.addEventListener('scroll', function(){
+                console.log(this.offsetHeight)
+                console.log(this.scrollTop)
+                if(this.offsetHeight + this.scrollTop >= this.scrollHeight || this.scrollTop === 0){
+                    window.focus();
+                    console.log('no')
+                }
+            })
+        }
+    //End of document loaded
     });
 
     var check = debounce(checkScroll(),100)
@@ -122,7 +221,6 @@
     function toggleLess(){
         document.querySelector('.Service-start-box-container').classList.toggle('Service-start-box-hide');
         seeLess = document.querySelector('.Service-see-less')
-        console.log('see')
         if(seeLess.innerHTML === 'See less'){
             seeLess.innerHTML = 'See more'
         } else if(seeLess.innerHTML ==='See more') {
@@ -132,9 +230,7 @@
     }
 
     function toggleFill(elements, num){
-        console.log(num)
         for (var i = 0; i < elements.length; i++) {
-            console.log(i)
             if(i === num){
                 elements[i].style.backgroundColor = '#214475'
             } else {

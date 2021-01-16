@@ -24,7 +24,7 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-position: 25%;
-  margin-top: -430px;
+  margin-top: -638px;
 }
 .carousel-item {
   @include respond("lg") {
@@ -148,6 +148,9 @@
       border-radius: 5px;
       font-weight: bold;
       margin-top: auto;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -124,8 +124,8 @@
       }
     }
     &-img {
-      width: 5rem;
-      height: 5rem;
+      width: 10rem;
+      height: 10rem;
       @include respond("lg") {
         width: 25rem;
         height: 25rem;
@@ -216,13 +216,16 @@
       color: white;
       font-size: 24px;
       padding: 2rem;
-      font-weight: bold;
       @include respond("lg") {
         font-size: 28px;
       }
       & > p {
         font-size: 22px;
         font-weight: normal;
+      }
+      &-title {
+        font-size: 28px;
+        font-weight: bold;
       }
     }
     &-button {
