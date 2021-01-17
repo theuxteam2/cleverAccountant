@@ -1,6 +1,6 @@
 .carousel-indicators {
   bottom: -2rem;
-  @include respond("lg") {
+  @include respond("xl") {
     display: none;
   }
 
@@ -17,7 +17,7 @@
 .carousel-control-prev,
 .carousel-control-next {
   width: 22%;
-  @include respond("lg") {
+  @include respond("xl") {
     display: none;
   }
 }
@@ -29,10 +29,15 @@
 .carousel-item {
   @include respond("xl") {
     width: 25%;
-    display: block;
-    margin-right: 0;
-    float: inline-end;
+    display: flex;
+    margin: 0 6px;
   }
+}
+.carousel-inner {
+  display: flex;
+}
+.pricing-content-wrapper {
+  background-color: #f6f6ff;
 }
 .Pricing {
   &-header {
@@ -47,12 +52,12 @@
       }
     }
     &-title {
-      padding: 2rem;
+      padding: 60px 40px;
       background-color: #f6f6ff;
       text-align: center;
       font-size: 30px;
       font-weight: bold;
-      @include respond("lg") {
+      @include respond("xl") {
         font-size: 36px;
         text-align: initial;
       }
@@ -63,7 +68,7 @@
         left: 10%;
         font-size: 28px;
         font-family: $BebasNeue;
-        @include respond("lg") {
+        @include respond("xl") {
           font-size: 58px;
         }
       }
@@ -74,14 +79,12 @@
   }
 
   &-card {
-    padding: 1rem;
+    padding: 35px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 90vh;
-    @include respond("lg") {
-      height: 85vh;
-    }
+    flex: 1;
+
     & > * {
       color: white;
     }
@@ -108,8 +111,12 @@
       }
     }
     &-content {
+      padding-bottom: 25px;
+      font-weight: bold;
       &-title {
         font-weight: bold;
+        font-size: 20px;
+        padding: 15px 0;
       }
       &-box {
         padding: 0.1rem 1rem;
