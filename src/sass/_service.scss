@@ -39,13 +39,14 @@
         font-weight: bold;
         position: absolute;
         font-family: $BebasNeue;
-        top: 10%;
-        left: 10%;
+        top: 20%;
+        left: 20%;
+        font-weight: bold;
 
         @include respond("lg") {
           font-size: 58px;
-          top: 10%;
-          left: 10%;
+          top: 20%;
+          left: 20%;
         }
       }
     }
@@ -82,9 +83,9 @@
     }
   }
   &-cards {
-    max-height: 70vh;
+    max-height: 90vh;
     overflow: scroll;
-    padding: 1rem;
+    padding: 0rem 1rem;
     scroll-snap-type: y mandatory;
     @include respond("lg") {
       padding: 2rem;
@@ -283,9 +284,11 @@
   &-quote {
     background-color: #43abc8;
     color: white;
-    padding: 3rem;
     @include respond("lg") {
       justify-content: center;
+    }
+    & > div:first-child {
+      padding: 2rem;
     }
     & > div {
       @include respond("lg") {
@@ -300,10 +303,10 @@
       }
     }
     &-content {
-      font-size: 28px;
+      font-size: 22px;
     }
     &-button {
-      max-width: 15rem;
+      padding: 1rem 1rem 1rem 1rem;
       & > div {
         @include respond("lg") {
           padding: 2rem 3rem;

@@ -14,6 +14,7 @@
     &-title-white {
       top: 20%;
       left: 20%;
+      font-weight: bold;
       position: absolute;
       font-family: $BebasNeue;
       font-size: 28px;
@@ -71,11 +72,12 @@
       font-weight: normal;
     }
     &-images {
-      justify-content: center;
+      justify-content: space-around;
       margin-top: 1rem;
       & > .col-3 {
         display: flex;
         justify-content: center;
+        padding: 0 2rem;
         & > img {
           width: auto;
           height: 55%;
@@ -114,6 +116,7 @@
     &-header {
       font-size: 24px;
       font-weight: bold;
+      text-align: center;
       @include respond("lg") {
         font-size: 32px;
       }
