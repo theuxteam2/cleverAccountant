@@ -27,7 +27,7 @@
   margin-top: -638px;
 }
 .carousel-item {
-  @include respond("lg") {
+  @include respond("xl") {
     width: 25%;
     display: block;
     margin-right: 0;
