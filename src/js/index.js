@@ -2,33 +2,89 @@
     //MOVE TITLE PRICING
    document.addEventListener("DOMContentLoaded", function(event) {
         if(localStorage.getItem('package')){
-            console.log(localStorage.getItem('package'))
             location.href='#service-1'; 
             var package = localStorage.getItem('package')
             localStorage.removeItem('package');
             var cards = document.querySelector('.Service-cards');
             if(package === 'service-4'){
-                cards.scrollTop = 1200
+                location.href='#service-4'
+                // cards.scrollTop = 1200
             }
             if(package === 'service-3'){
-                cards.scrollTop = 800
+                // cards.scrollTop = 800
+                location.href='#service-3' 
+
             }
             if(package === 'service-6'){
-                cards.scrollTop = 2400
+                location.href='#service-6'
+                // cards.scrollTop = 2400
             }
           
            
 
         }
+
+        if ( document.URL.includes("service.html") ) {
+            localStorage.setItem('location', 'service')
+
+        }else if ( document.URL.includes("pricing.html") ) {
+            localStorage.setItem('location', 'pricing')
+
+
+        }else if ( document.URL.includes("aboutus.html") ) {
+            localStorage.setItem('location', 'aboutus')
+
+        }else if ( document.URL.includes("contactus.html") ) {
+            localStorage.setItem('location', 'contactus')
+
+
+        } else {
+            localStorage.setItem('location', 'home')
+        }
+
+        
+        
        var package = document.querySelector('#packages')
        if(package){
            package.value = localStorage.getItem('services')
        }
+
+       
         
-       var card = document.querySelector('.Service-cards')
-       if(card){
-       card.addEventListener('scroll', check);
+      
+
+       function isScrolledIntoView(elem)
+        {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+
+            var elemTop = $(elem).offset().top;
+            var elemBottom = elemTop + $(elem).height();
+
+            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+
+       var serviceCards = document.querySelectorAll('.Service-card');
+       if(serviceCards){
+           let circles = document.querySelectorAll('.Service-card-circle');
+          [...serviceCards].forEach( function(card,i){
+               card.addEventListener('mouseover', function(){
+               toggleFill(circles,i)
+           })
+           card.addEventListener('mouseout', function(){
+               toggleFill(circles,i);
+           })
+          })
        }
+
+        var cards = document.querySelector('.Service-cards')
+       if(cards){
+       cards.addEventListener('scroll', check);
+    
+        
+     
+       }
+
         //Contact page validation
        var name = document.querySelector('#Name')
        if(name){
@@ -56,6 +112,7 @@
        if(closeButton){
            closeButton.addEventListener('click', toggleModal)
        }
+       
 
         var learnMoreButtons = document.querySelectorAll('.read-more')
         if(learnMoreButtons){
@@ -73,6 +130,15 @@
 
        
         var bookingButtons = document.querySelectorAll('.Service-card-button-large');
+        if(bookingButtons){
+            [...bookingButtons].forEach(function(elem) {
+                elem.addEventListener('click', function(e){
+                    localStorage.setItem('services', (this.getAttribute('data-service')))
+                    window.location.assign('/contactus.html')
+                })
+            })
+        }
+        var bookingButtons = document.querySelectorAll('.Service-card-button');
         if(bookingButtons){
             [...bookingButtons].forEach(function(elem) {
                 elem.addEventListener('click', function(e){
@@ -125,9 +191,7 @@
             if (location.hash.length !== 0) {
                 var titleService = document.querySelector('#service-1');
 
-                if(titleService){
-                    console.log(titleService.getBoundingClientRect())
-                }
+               
 
                 
                 window.scrollTo(window.scrollX, titleService.getBoundingClientRect().top);
@@ -139,15 +203,16 @@
 
 
         var serviceCards= document.querySelector('.Service-cards')
-        if(serviceCards){
+        if(serviceCards){ 
             serviceCards.addEventListener('scroll', function(){
-                console.log(this.offsetHeight)
-                console.log(this.scrollTop)
+              
                 if(this.offsetHeight + this.scrollTop >= this.scrollHeight || this.scrollTop === 0){
+                    document.querySelector('.Service').focus();
+                    document.querySelector('.Service-quote').focus();
                     window.focus();
-                    console.log('no')
                 }
             })
+           
         }
     //End of document loaded
     });

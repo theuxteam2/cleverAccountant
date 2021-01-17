@@ -22,3 +22,11 @@
 .button-large {
   font-size: map-get($map: $theme-font-sizes, $key: "h2");
 }
+
+.button-contactus {
+  @include respond("lg") {
+    padding: 1rem 2rem !important;
+    border-radius: 5px;
+    background-color: #dfb13c;
+  }
+}

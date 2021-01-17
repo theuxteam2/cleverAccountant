@@ -57,6 +57,7 @@ $HelveticaNeue: "Helvetica Neue";
 
 body {
   max-width: 100%;
+  overflow-x: hidden;
   @include respond("lg") {
     position: relative;
   }
