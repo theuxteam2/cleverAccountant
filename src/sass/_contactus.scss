@@ -47,7 +47,7 @@
     align-items: flex-start;
     background-color: #43abc8;
     padding: 3.5rem 2.5rem;
-    padding-top: 0;
+    padding-top: 2rem;
     color: white;
     font-size: 16px;
     & > div:last-child {
@@ -179,9 +179,14 @@
         width: 100%;
       }
       &-footer {
+        @include respond("md") {
+          position: absolute;
+          right: 13%;
+          bottom: 3%;
+        }
         @include respond("lg") {
           position: absolute;
-          right: 22%;
+          right: 16%;
           bottom: 5%;
         }
       }

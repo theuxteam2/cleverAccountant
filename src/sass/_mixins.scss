@@ -1,4 +1,9 @@
 @mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+   @media only screen and (min-width: 414px) {
+      @content;
+    } //600px
+  }
   @if $breakpoint == sm {
     // not apply when printing
     @media only screen and (min-width: 576px) {

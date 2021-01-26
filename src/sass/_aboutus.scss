@@ -30,6 +30,7 @@
     align-items: center;
     background-color: #f6f6ff;
     padding: 2rem;
+    position: relative;
     @include respond("md") {
       padding: 4rem;
     }
@@ -95,14 +96,19 @@
     align-items: center;
     margin-top: 2rem;
     background-color: #f6f6ff;
+    position: relative;
 
     &-box {
       margin-top: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      @include respond("lg") {
+      @include respond("md") {
         flex-direction: row;
+        padding: 1rem 8rem;
+      }
+      @include respond("xl") {
+        padding: 0;
       }
       &-left {
         display: flex;
@@ -110,15 +116,27 @@
         align-items: center;
       }
       &-right {
-        padding: 2rem;
+        padding: 1rem;
+        @include respond("md") {
+          padding: 0 2rem;
+        }
       }
     }
     &-header {
       font-size: 24px;
       font-weight: bold;
       text-align: center;
+      @include respond("md") {
+        font-size: 28px;
+      }
       @include respond("lg") {
         font-size: 32px;
+      }
+      &-lg {
+        font-size: 28px;
+        @include respond("md") {
+          padding-top: 2rem;
+        }
       }
     }
     &-content {
@@ -129,9 +147,17 @@
     &-img {
       width: 10rem;
       height: 10rem;
+      @include respond("md") {
+        width: 12rem;
+        height: 12rem;
+      }
       @include respond("lg") {
-        width: 25rem;
-        height: 25rem;
+        width: 15rem;
+        height: 15rem;
+      }
+      @include respond("xl") {
+        width: 20rem;
+        height: 20rem;
       }
       & > img {
         width: 100%;
@@ -163,6 +189,9 @@
       font-weight: bold;
       display: flex;
       justify-content: center;
+      @include respond("md") {
+        font-size: 28px;
+      }
       @include respond("lg") {
         font-size: 32px;
       }
@@ -174,11 +203,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include respond("md") {
+        flex-direction: row-reverse;
+      }
       @include respond("lg") {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-top: 2rem;
+        margin-top: 6rem;
         background-color: #f6f6ff;
         justify-content: center;
       }
@@ -197,6 +229,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        @include respond("md") {
+          align-self: flex-start;
+          top: 5rem;
+        }
         @include respond("lg") {
           order: 2;
         }
@@ -217,10 +253,13 @@
     }
     &-content {
       color: white;
-      font-size: 24px;
+      font-size: 16px;
       padding: 2rem;
+      @include respond("md") {
+        font-size: 16px;
+      }
       @include respond("lg") {
-        font-size: 28px;
+        font-size: 20px;
       }
       & > p {
         font-size: 22px;
@@ -229,10 +268,19 @@
       &-title {
         font-size: 28px;
         font-weight: bold;
+        @include respond("xxl") {
+          font-size: 40px;
+        }
       }
     }
     &-button {
       padding: 1rem 1rem 1rem 1rem;
+      @include respond("sm") {
+        max-width: 350px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
       @include respond("lg") {
         width: 25rem !important;
       }

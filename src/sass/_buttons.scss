@@ -8,6 +8,8 @@
   text-align: center;
   border-radius: 5px;
   font-weight: bold;
+  @include respond("lg") {
+  }
 }
 
 .button-yellow {
@@ -24,7 +26,7 @@
 }
 
 .button-contactus {
-  @include respond("lg") {
+  @include respond("xl") {
     padding: 1rem 2rem !important;
     border-radius: 5px;
     background-color: #dfb13c;

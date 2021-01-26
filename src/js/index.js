@@ -20,7 +20,6 @@
                 // cards.scrollTop = 2400
             }
           
-           
 
         }
 

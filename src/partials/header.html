@@ -1,79 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="./img/icon.png" />
-    <title>The Clever Accountants</title>
-  </head>
 
-  <body class="">
-    <header id="header" class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid d-flex justify-content-between">
-          <div class="navbar-brand col-4">
-            <a class="" href="/">
-              <div class="navbar-logo">
-                <img src="/img/logo_transparent.png" alt="" />
-                <div class="navbar-brand-title">The Clever Accountants</div>
-              </div>
-            </a>
-          </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="">
-              <div class="navbar-burger-menu">
-                <div class="navbar-burger-menu-line">&nbsp</div>
-                <div class="navbar-burger-menu-line">&nbsp</div>
-                <div class="navbar-burger-menu-line">&nbsp</div>
-              </div>
-            </span>
-          </button>
-          <div
-            class="collapse navbar-collapse col-4 justify-content-lg-around"
-            id="navbarSupportedContent"
-          >
-            <div class="navbar-overlay">&nbsp;</div>
-            <div class="navbar-box">
-              <div class="navbar-box-left">
-                <div class="navbar-box-left-img">
-                  <img src="img/logo_blue_background.png" alt="" />
-                </div>
-              </div>
-              <div class="navbar-box-right">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-                  <li class="nav-item">
-                    <a
-                      class="nav-link active"
-                      aria-current="page"
-                      href="/service.html"
-                      >Services</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/pricing.html">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/aboutus.html">About Us</a>
-                  </li>
-                  <li class="nav-item  ">
-                    <a class="nav-link button-contactus " href="/contactus.html" tabindex="-1"
-                      >Contact Us</a
-                    >
-                  </li>
-                </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="./img/the_clever_accountants_logo.png" />
+  <!-- <link href="http://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
+  <link href="http://fonts.cdnfonts.com/css/bebas-neue?styles=17620" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>The Clever Accountants</title>
+</head>
+
+<body class="">
+  <header id="header" class="container-fluid">
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <div class="container-fluid d-flex justify-content-between">
+        <div class="navbar-brand col-4">
+          <a class="" href="/">
+            <div class="navbar-logo">
+              <img src="/img/logo_transparent.png" alt="" />
+              <div class="navbar-brand-title">The Clever Accountants</div>
+            </div>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="">
+            <div class="navbar-burger-menu">
+              <div class="navbar-burger-menu-line">&nbsp</div>
+              <div class="navbar-burger-menu-line">&nbsp</div>
+              <div class="navbar-burger-menu-line">&nbsp</div>
+            </div>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse col-4 col-lg-12 justify-content-lg-end" id="navbarSupportedContent">
+          <div class="navbar-overlay">&nbsp;</div>
+          <div class="navbar-box">
+            <div class="navbar-box-left">
+              <div class="navbar-box-left-img">
+                <img src="img/logo_blue_background.png" alt="" />
               </div>
             </div>
-            <div class="navbar-info d-flex flex-column align-items-center">
+            <div class="navbar-info d-flex flex-column align-items-center d-none d-md-block d-xl-none">
               <div class="navbar-info-phone">
                 <span><img src="img/mobile/cellphone2x.png" alt="" /></span>
                 (714) 532-3002
@@ -82,11 +53,41 @@
               <div class="navbar-info-phone">
                 1665 E 4th St Ste 212 Santa Ana, CA 92701
               </div>
-              <div class="navbar-info-img">
+              <div class="navbar-info-img d-none">
                 <img src="img/mobile/hero-illustration-about-us.png" alt="" />
               </div>
             </div>
+            <div class="navbar-box-right">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item  ">
+                  <a class="nav-link button-contactus " href="/contactus.html" tabindex="-1">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-info d-flex flex-column align-items-center">
+            <div class="navbar-info-phone d-md-none ">
+              <span><img src="img/mobile/cellphone2x.png" alt="" /></span>
+              (714) 532-3002
+            </div>
+            <div class="navbar-info-email d-block d-md-none ">info@thecleveraccountants.com</div>
+            <div class="navbar-info-phone d-block d-md-none ">
+              1665 E 4th St Ste 212 Santa Ana, CA 92701
+            </div>
+            <div class="navbar-info-img">
+              <img src="img/mobile/hero-illustration-about-us.png" alt="" />
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
