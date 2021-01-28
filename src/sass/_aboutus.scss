@@ -104,11 +104,13 @@
       flex-direction: column;
       align-items: center;
       @include respond("md") {
-        flex-direction: row;
-        padding: 1rem 8rem;
+        padding: 1rem 1rem;
       }
-      @include respond("xl") {
-        padding: 0;
+      @include respond("lg") {
+        flex-direction: row;
+      }
+      @include respond("xxl") {
+        padding: 0 15vw;
       }
       &-left {
         display: flex;
@@ -118,7 +120,6 @@
       &-right {
         padding: 1rem;
         @include respond("md") {
-          padding: 0 2rem;
         }
       }
     }
@@ -126,6 +127,7 @@
       font-size: 24px;
       font-weight: bold;
       text-align: center;
+      margin: 1rem;
       @include respond("md") {
         font-size: 28px;
       }
@@ -140,6 +142,11 @@
       }
     }
     &-content {
+      padding: 1rem;
+      @include respond("md") {
+        padding: 2rem;
+      }
+
       & > * {
         font-weight: normal;
       }
@@ -152,12 +159,11 @@
         height: 12rem;
       }
       @include respond("lg") {
-        width: 15rem;
-        height: 15rem;
+        width: 70%;
+        height: auto;
       }
       @include respond("xl") {
-        width: 20rem;
-        height: 20rem;
+        max-width: 360px;
       }
       & > img {
         width: 100%;
@@ -176,7 +182,12 @@
       display: flex;
       flex-direction: column;
       padding: 1rem;
-      width: 70%;
+      width: 100%;
+      max-width: 530px;
+      @include respond("lg") {
+        align-self: center;
+      }
+
       & > img {
         width: 100%;
         height: auto;
@@ -197,23 +208,32 @@
       }
     }
     &-content {
-      padding: 2rem;
+      padding: 1rem;
+      @include respond("md") {
+        padding: 3rem;
+      }
     }
     &-box {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 1rem;
       @include respond("md") {
-        flex-direction: row-reverse;
+        justify-content: center;
       }
       @include respond("lg") {
         display: flex;
-        flex-direction: row;
         align-items: center;
         margin-top: 6rem;
         background-color: #f6f6ff;
         justify-content: center;
+        flex-direction: row;
       }
+      @include respond("xxl") {
+        flex-direction: row;
+        padding: 0 15vw;
+      }
+
       &-left {
         display: flex;
         flex-direction: column;
@@ -230,7 +250,6 @@
         flex-direction: column;
         align-items: center;
         @include respond("md") {
-          align-self: flex-start;
           top: 5rem;
         }
         @include respond("lg") {

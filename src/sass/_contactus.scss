@@ -151,6 +151,11 @@
     padding: 2rem;
     display: none;
     border-radius: 14px;
+    & > div:nth-child(5) {
+      @include respond("md") {
+        margin-top: 4rem;
+      }
+    }
 
     @include respond("lg") {
       align-items: stretch;

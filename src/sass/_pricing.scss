@@ -91,6 +91,7 @@
     flex-direction: column;
     align-items: center;
     height: 90vh;
+    min-height: 850px;
     @include respond("md") {
       height: 80vh;
     }
@@ -99,7 +100,6 @@
     }
     @include respond("xl") {
       flex: 1;
-      min-height: 0;
       height: 90vh;
     }
 
@@ -141,6 +141,7 @@
       &-text {
         &-small {
           font-size: 14px;
+          font-weight: normal;
         }
       }
       &-box {

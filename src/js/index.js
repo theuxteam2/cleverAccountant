@@ -22,7 +22,7 @@
           
 
         }
-
+        //
         if ( document.URL.includes("service.html") ) {
             localStorage.setItem('location', 'service')
 
@@ -49,7 +49,7 @@
        }
 
        
-        
+      
       
 
        function isScrolledIntoView(elem)

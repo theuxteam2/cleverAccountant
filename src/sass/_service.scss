@@ -228,6 +228,7 @@
   &-getting-started {
     background-color: #e4ebf6 !important;
     overflow: hidden;
+
     @include respond("md") {
       padding: 2rem 0rem;
     }
@@ -245,7 +246,7 @@
       color: #2b2b2b !important;
       margin-bottom: 0 !important;
       @include respond("lg") {
-        align-self: start;
+        align-self: center;
       }
     }
   }
@@ -265,13 +266,13 @@
         padding: 1rem 10rem;
       }
       @include respond("lg") {
-        padding: 1rem 2rem;
+        padding: 0rem 0rem;
       }
       &-container {
         @include respond("lg") {
           display: flex;
           margin-bottom: 1rem;
-          padding: 2rem;
+          justify-content: around;
         }
       }
       &-hide {
@@ -289,9 +290,16 @@
     }
     &-content {
       font-size: 14px;
+      @include respond("sm") {
+        padding: 1rem 5vw;
+      }
       @include respond("lg") {
         padding: 0.5rem;
         margin-top: auto;
+        min-height: 165px;
+      }
+      @include respond("xl") {
+        padding: 1rem 5vw;
       }
     }
   }
