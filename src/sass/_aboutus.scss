@@ -254,6 +254,7 @@
         }
         @include respond("lg") {
           order: 2;
+          align-self: flex-start;
         }
       }
     }

@@ -39,7 +39,7 @@
     }
     @include respond("lg") {
       padding-top: 2vw;
-      padding-left: 5vw;
+      padding-left: 9vw;
       height: 45vw;
       position: relative;
       justify-content: start;
@@ -85,17 +85,24 @@
       z-index: 2;
       position: relative;
       text-align: center;
+      height: 74px;
+      max-width: 22rem;
       @media only screen and(min-width:414px) {
         height: 74px;
-        max-width: 412px;
+        max-width: 28rem;
       }
       @include respond("sm") {
       }
 
       @include respond("md") {
+        height: 74px;
+        max-width: 518px;
       }
 
       @include respond("lg") {
+        max-width: initial;
+      }
+      @include respond("xl") {
         max-width: initial;
       }
 
@@ -104,20 +111,21 @@
         font-size: 25px;
         font-family: "Bebas Neue", sans-serif;
         font-weight: bold;
-        padding: 2rem 3rem;
+
         @media only screen and (min-width: 414px) {
           font-size: 28px;
+          padding: 2rem 17%;
         }
         @include respond("md") {
           font-size: 36px;
-          padding: 0rem 0rem;
+          padding: 0rem 1.5rem;
           margin-bottom: 5rem;
         }
         @include respond("lg") {
           font-size: 42px;
         }
         @include respond("xxl") {
-          font-size: 72px;
+          font-size: 70px;
         }
       }
     }
@@ -154,17 +162,17 @@
       &-small {
         position: absolute;
         bottom: 0;
-        right: -20%;
+        right: -14%;
         width: 60vw;
-        max-width: 265px;
+        max-width: 200px;
         @include respond("xs") {
           right: -9%;
-          width: 55vw;
-          max-width: 224px;
+          width: 62vw;
+          max-width: 230px;
         }
 
         @include respond("sm") {
-          right: 0%;
+          right: 1%;
         }
 
         @include respond("md") {
@@ -203,10 +211,14 @@
       color: map-get($map: $theme-colors, $key: "white");
       font-family: $HelveticaNeue;
       padding: 0rem;
+      @include respond("xs") {
+        padding: 0 2%;
+      }
       @include respond("sm") {
       }
       @include respond("md") {
-        font-size: 20px;
+        font-size: 16px;
+        padding: 0 1.5rem;
       }
 
       @include respond("lg") {
@@ -235,9 +247,9 @@
       &-button {
         z-index: 2;
         position: relative;
-        margin: 2.5rem 0;
+        margin: 1rem 0;
         @include respond("md") {
-          max-width: 25%;
+          max-width: 35%;
           margin: 1.5rem 0;
         }
         @include respond("lg") {
@@ -249,6 +261,7 @@
             font-weight: bold;
             @include respond("lg") {
               font-size: 20px;
+              margin-left: 1rem;
             }
           }
           @include respond("xl") {
@@ -319,8 +332,12 @@
       width: 100%;
     }
     @include respond("md") {
-      & > div {
-      }
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include respond("lg") {
+      width: 100%;
     }
 
     @include respond("xxl") {
@@ -349,6 +366,9 @@
       @include respond("xs") {
         margin: 0 auto 0 auto;
       }
+      @include respond("sm") {
+        margin: 0 auto 0 auto;
+      }
       @include respond("md") {
         margin: 0;
       }
@@ -356,8 +376,11 @@
         height: auto;
         width: 100%;
         max-width: 400px;
-
+        @include respond("xs") {
+          max-width: 337px;
+        }
         @include respond("lg") {
+          max-width: 440px;
         }
       }
     }
@@ -418,8 +441,11 @@
         height: auto;
         width: 100%;
         max-width: 400px;
+        @include respond("xs") {
+          max-width: 337px;
+        }
         @include respond("lg") {
-          width: 449px;
+          max-width: 440px;
         }
       }
     }
@@ -479,6 +505,13 @@
         max-width: 400px;
         height: auto;
         width: 100%;
+        max-width: 400px;
+        @include respond("xs") {
+          max-width: 337px;
+        }
+        @include respond("lg") {
+          max-width: 440px;
+        }
       }
     }
   }
@@ -525,6 +558,9 @@
     @include respond("md") {
       height: 57vw;
       margin-top: 0rem;
+    }
+    @include respond("xl") {
+      height: 55vw;
     }
 
     &-box {
